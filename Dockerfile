@@ -4,7 +4,7 @@
 # https://hub.docker.com/r/bellsoft/liberica-openjdk-alpine
 # https://bell-sw.com/libericajdk-containers/
 
-FROM bellsoft/liberica-openjdk-alpine:17.0.12-10
+FROM bellsoft/liberica-openjdk-alpine:21.0.5-11
 
 LABEL maintainer="Amith Koujalgi <koujalgi.amith@gmail.com>"
 
