@@ -91,7 +91,7 @@ public class ChatService implements Serializable {
         OllamaChatRequestBuilder builder = OllamaChatRequestBuilder.getInstance(model);
         OllamaChatRequest ollamaChatRequestModel = builder
                 .withMessages(messages)
-                .withMessage(OllamaChatMessageRole.USER, message, imageFiles)
+                .withMessage(OllamaChatMessageRole.USER, message, Collections.emptyList(), imageFiles)
                 .build();
         try {
             OllamaChatResult chat = ollamaAPI.chat(ollamaChatRequestModel, streamHandler);
