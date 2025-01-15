@@ -167,15 +167,13 @@ public class ChatWithImageView extends VerticalLayout {
     answer.setUserColorIndex(2);
     chat.setItems(chatEntries);
 
-    Thread t =
-        new Thread(
+      Thread.ofVirtual().name("image-chat-virtual-thread").start(
             () ->
                 chatService.askWithImages(
                     submitEvent.getValue(),
                     imageFiles,
                     modelSelected,
                     (s) -> getUI().ifPresent(ui -> ui.access(() -> answer.setText(s)))));
-    t.start();
   }
 
   public static File inputStreamToFile(InputStream inputStream) throws IOException {

@@ -116,13 +116,11 @@ public class ChatView extends VerticalLayout {
     answer.setUserColorIndex(2);
     chat.setItems(chatEntries);
 
-    Thread t =
-        new Thread(
-            () ->
-                chatService.ask(
-                    submitEvent.getValue(),
-                    modelSelected,
-                    (s) -> getUI().ifPresent(ui -> ui.access(() -> answer.setText(s)))));
-    t.start();
+      Thread.ofVirtual().name("chat-virtual-thread")
+              .start(() ->
+                      chatService.ask(
+                              submitEvent.getValue(),
+                              modelSelected,
+                              (s) -> getUI().ifPresent(ui -> ui.access(() -> answer.setText(s)))));
   }
 }
