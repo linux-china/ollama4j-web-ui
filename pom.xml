@@ -7,19 +7,19 @@
     <groupId>io.github.ollama4j</groupId>
     <artifactId>ollama4j-web-ui</artifactId>
     <name>ollama4j-web-ui</name>
-    <version>${revision}</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
-        <!--        <revision>0.0.2</revision>-->
-        <java.version>17</java.version>
-        <vaadin.version>24.4.13</vaadin.version>
+        <!--<revision>0.0.2</revision>-->
+        <java.version>21</java.version>
+        <vaadin.version>24.6.0</vaadin.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version>
+        <version>3.4.1</version>
     </parent>
 
     <repositories>
@@ -56,17 +56,16 @@
         <dependency>
             <groupId>io.github.ollama4j</groupId>
             <artifactId>ollama4j</artifactId>
-            <version>1.0.89</version>
+            <version>1.0.91</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.14.0</version>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
-            <artifactId>vaadin</artifactId>
+            <artifactId>vaadin-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -75,7 +74,7 @@
         <dependency>
             <groupId>org.parttio</groupId>
             <artifactId>line-awesome</artifactId>
-            <version>2.0.0</version>
+            <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,7 +98,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
+            <version>1.18.36</version>
         </dependency>
     </dependencies>
 
